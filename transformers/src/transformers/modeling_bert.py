@@ -1599,6 +1599,7 @@ class BertForQuestionAnswering(BertPreTrainedModel):
         end_positions=None,
         output_attentions=None,
         output_hidden_states=None,
+        output_norms=None, #Inspired by Goro Kobayashi Changed by Rui
     ):
         r"""
         start_positions (:obj:`torch.LongTensor` of shape :obj:`(batch_size,)`, `optional`, defaults to :obj:`None`):
@@ -1640,6 +1641,7 @@ class BertForQuestionAnswering(BertPreTrainedModel):
             inputs_embeds=inputs_embeds,
             output_attentions=output_attentions,
             output_hidden_states=output_hidden_states,
+            output_norms=output_norms, #Inspired by Goro Kobayashi Changed by Rui
         )
 
         sequence_output = outputs[0]
